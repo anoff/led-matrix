@@ -1,5 +1,5 @@
 {
     "board": "arduino:avr:uno",
     "port": "/dev/cu.usbmodem1411401",
-    "sketch": "blup.ino"
+    "sketch": "rainbow.ino"
 }

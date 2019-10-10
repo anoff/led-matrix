@@ -11,8 +11,11 @@ void setup() {
   FastLED.setBrightness(30);
   counter = 0;
   hue = random8();
+  Serial.begin(115200);
 }
 void loop() {
+  Serial.print("Setting hue to: ");
+  Serial.println(hue);
   leds[counter] = CHSV(hue, 255, 255);
   counter++;
   if (counter > NUM_LEDS) {
@@ -25,5 +28,5 @@ void loop() {
   if (hue >= 255) {
     hue = 0;
   }
-  delay(50);  
+  delay(50);
 }
