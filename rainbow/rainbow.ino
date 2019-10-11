@@ -1,6 +1,7 @@
 #include <FastLED.h>
-#define LED_PIN     7
-#define NUM_LEDS    64
+#define LED_PIN 7
+#define NUM_LEDS 64
+
 CRGB leds[NUM_LEDS];
 int counter;
 int hue;
@@ -16,7 +17,7 @@ void setup() {
 void loop() {
   Serial.print("Setting hue to: ");
   Serial.println(hue);
-  leds[counter] = CHSV(hue, 255, 255);
+  leds[counter] = CHSV(hue, 255, 90);
   counter++;
   if (counter > NUM_LEDS) {
     counter = 0;
